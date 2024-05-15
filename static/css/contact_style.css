@@ -1,0 +1,95 @@
+.logo{
+    margin-left:10px;
+}
+.navbar-brand{
+    font-weight: 550;
+}
+.nav-item:hover{
+    font-weight: 500;
+}
+.welcome-component{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+}
+.carousel-container{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.carousel-container {
+    max-width: 100vh; /* Carousel container'ının maksimum genişliği */
+  }
+  .carousel-item img {
+    border-radius: 10%;
+    max-width: 100%; /* Carousel içindeki resimlerin maksimum genişliği */
+    height: auto; /* Resimlerin orijinal boyut oranlarını korumak için */
+}
+
+.nav-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+    size: 40px;
+}
+.nav-icon a{
+    background-color: white;
+    color: black;
+}
+.nav-icon a i{
+    font-size: 2.2em;
+}
+.nav-icon a:hover{
+    opacity: 60%;
+    transition: 0.5s;
+}
+.img-food{
+    border-radius: 10%;
+}
+
+.nav-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+    size: 40px;
+}
+.nav-icon a{
+    background-color: white;
+    color: black;
+}
+.nav-icon a i{
+    font-size: 2.2em;
+}
+.nav-icon a:hover{
+    opacity: 60%;
+    transition: 0.3s;
+}
+.logo{
+    margin-left:10px;
+}
+.navbar-brand{
+    font-weight: 550;
+}
+.nav-item:hover{
+    font-weight: 500;
+}
+.food-image{
+    border-radius: 10%;
+}
+.content {
+    display: flex; /* This enables flexbox */
+    align-items: center; /* This vertically centers the items if they are of different heights */
+}
+
+.content img {
+    margin-right: 10px; /* Adds space between the image and the paragraph */
+}
+#brand-name{
+    font-size:1.5em;
+}
+.food-item:hover{
+    opacity:0.75
+}

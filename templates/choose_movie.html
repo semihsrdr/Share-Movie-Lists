@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Movie{% endblock %}
+
+{% block content %}
+<div class="container container-list">
+    <h1 class="heading">Select Movie</h1>
+     {% for movie in movies %}
+  <p>
+    <a methods="post" href={{url_for('add_movie',list_id=list_id,movie_id=movie.id,movie_title=movie.title)}}> {{movie.title}} - {{movie.release_date}}</a>
+  </p>
+    {% endfor %}
+
+</div>
+{% endblock %}

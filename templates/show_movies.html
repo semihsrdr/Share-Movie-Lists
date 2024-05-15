@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}My Top 10 Movies{% endblock %}
+
+{% block content %}
+
+<div class="container pb-3">
+  <h1 class="heading">{{title}}</h1>
+  <p class="description">{{description}}</p>
+
+    {% for movie in movies %}
+  <div class="card" >
+    <div class="front" style="background-image: url('{{base_url}}{{movie.poster_path}}');">
+        <p class="large">{{loop.index}}</p>
+    </div>
+    <div class="back">
+      <div>
+    <div class="title">{{movie.original_title}}<span class="release_date"> ({{movie.release_date.split('-')[0]}})</span></div>
+        <div class="rating">
+            <label>{{ movie.vote_average|round(1) }}</label>
+          <i class="fas fa-star star"></i>
+        </div>
+          <p class="review">{{movie.tagline}}</p>
+        <p class="overview">
+            {{movie.overview}}
+        </p>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

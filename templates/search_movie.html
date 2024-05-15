@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Add Movie{% endblock %}
+
+{% block content %}
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+            {% if msg == 'You couldn\'t add your movie!' %}
+                <h5 style="text-align:center; background:pink; font-weight:300" class="py-3 mb-0">{{msg}}</h5>
+            {% else %}
+                <h5 style="text-align:center; background:#CDFADB; font-weight:300" class="py-3 mb-0">{{msg}}</h5>
+            {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+<div class="content">
+    <div class="custom-form col-xxl-7 col-xl-8 col-lg-8 col-md-10 col-sm-11 col-xs-11">
+    <h1 class="heading">Search Movie</h1>
+    {{ render_form(form) }}
+        {% if movies %}
+
+        <h3 style="margin-top:5%">Movies:</h3>
+    <ul>
+        {% for movie in movies %}
+        <li>{{ movie }}</li>
+        {% endfor %}
+    </ul>
+        <a href={{url_for('create_list',list_id=list_id)}} class="btn btn-dark">Create List</a>
+        {% endif%}
+    </div>
+</div>
+
+
+
+{% endblock %}

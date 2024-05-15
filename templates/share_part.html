@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Your List is Ready{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<div class="px-4 py-5 my-3 text-center custom-form">
+    <img class="d-block mx-auto mb-4" src="/static/share_part.png" alt="" width="200">
+    <h1 class="display-5 fw-bold text-body-emphasis">Ready to Share</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Your list is ready right now! You can start to share with your friends.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <input id="linkInput" type="text" value={{url}}>
+        <button onclick="copyLink()" type="button" class="btn btn-primary btn-lg px-4">Copy Link</button>
+          <a href={{url}} type="button" class="btn btn-success btn-lg px-4">Go to List</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function copyLink() {
+    var linkInput = document.getElementById("linkInput");
+    linkInput.select();
+    document.execCommand("copy");
+    alert("Link copied to clipboard");
+}
+</script>
+{% endblock %}
